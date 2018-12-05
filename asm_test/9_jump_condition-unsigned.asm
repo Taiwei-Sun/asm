@@ -8,31 +8,33 @@ section '.text' code readable executable
 
 start:
  
- mov eax,0h
- mov edx,0x80000000
- sub edx,1h
+ mov eax,1h
+ mov edx,0x0
+ ;sub edx,1h
  ;add edx,2h
+ cmp eax,edx
  
- jz jz_1
- js js_2
- jc jc_3
- jo jo_4
+ ja c_1
+ jae c_2
+ jb c_3
+ jbe c_4
  
+ mov eax,0h
  jmp exit_9
  
-jz_1:
+c_1:
  mov eax,1h
  jmp exit_9
  
-js_2:
+c_2:
  mov eax,2h
  jmp exit_9
  
-jc_3:
+c_3:
  mov eax,3h
  jmp exit_9
  
-jo_4:
+c_4:
  mov eax,4h
  jmp exit_9
  
