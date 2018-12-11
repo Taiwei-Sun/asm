@@ -1,3 +1,5 @@
+
+	
 ; ==============[read_hex]========================
 ; Reads hex number from console,
 ; and returns the resulting number in eax.
